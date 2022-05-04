@@ -1,8 +1,8 @@
 CREATE TABLE `Agendamento` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`id_cliente` varchar(255) NOT NULL,
+	`id_cliente` INT NOT NULL,
 	`id_tecnico` INT NOT NULL,
-	`id_atendentes` varchar(255) NOT NULL DEFAULT true,
+	`id_atendentes` INT NOT NULL DEFAULT true,
 	`id_servicos` INT NOT NULL,
 	`data_hora_prevista` DATETIME NOT NULL,
 	`data_hora_realizada` DATETIME NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE `Cliente` (
 	`nome` varchar(255) NOT NULL,
 	`cpf` INT NOT NULL,
 	`endereco` varchar(255) NOT NULL,
-	`contato` INT NOT NULL,
+	`contato` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -31,7 +31,7 @@ CREATE TABLE `Atendentes` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`nome` varchar(255) NOT NULL,
 	`funcao` varchar(255) NOT NULL,
-	`setor` INT NOT NULL,
+	`setor` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
