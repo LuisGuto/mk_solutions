@@ -2,7 +2,7 @@ CREATE TABLE `Agendamento` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`id_cliente` INT NOT NULL,
 	`id_tecnico` INT NOT NULL,
-	`id_atendentes` INT NOT NULL DEFAULT true,
+	`id_atendentes` INT NOT NULL,
 	`id_servicos` INT NOT NULL,
 	`data_hora_prevista` DATETIME NOT NULL,
 	`data_hora_realizada` DATETIME NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE `Situacao_agendamento` (
 CREATE TABLE `Servicos` (
 	`id_servicos` INT NOT NULL,
 	`descricao_servicos` varchar(255) NOT NULL,
-	`ativo` BOOLEAN(255) NOT NULL,
+	`ativo` BOOLEAN NOT NULL,
 	PRIMARY KEY (`id_servicos`)
 );
 
