@@ -17,4 +17,9 @@ class Servico_do_agendamento extends Model
         'id_agendamento',
         'id_servicos'
     ];
+
+    public function agendamento()
+    {
+        return $this->belongsTo(Agendamento::class, 'id_agendamento');
+    }
 }
