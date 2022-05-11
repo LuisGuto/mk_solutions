@@ -13,7 +13,7 @@ class CreateTableSituacaoAgendamento extends Migration
      */
     public function up()
     {
-        Schema::create('table_situacao_agendamento', function (Blueprint $table) {
+        Schema::create('situacao_agendamento', function (Blueprint $table) {
             $table->id();
             $table->string('nova', 255);
             $table->string('agendado', 255);
@@ -30,6 +30,6 @@ class CreateTableSituacaoAgendamento extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_situacao_agendamento');
+        Schema::dropIfExists('situacao_agendamento');
     }
 }

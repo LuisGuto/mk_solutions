@@ -13,7 +13,7 @@ class CreateTableAgendameto extends Migration
      */
     public function up()
     {
-        Schema::create('table_agendameto', function (Blueprint $table) {
+        Schema::create('agendameto', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_cliente')->constrained('cliente');
             $table->foreignId('id_tecnico')->constrained('tecnico');
@@ -33,6 +33,6 @@ class CreateTableAgendameto extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_agendameto');
+        Schema::dropIfExists('agendameto');
     }
 }

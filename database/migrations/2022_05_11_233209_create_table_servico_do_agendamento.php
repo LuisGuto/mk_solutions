@@ -13,7 +13,7 @@ class CreateTableServicoDoAgendamento extends Migration
      */
     public function up()
     {
-        Schema::create('table_servico_do_agendamento', function (Blueprint $table) {
+        Schema::create('servico_do_agendamento', function (Blueprint $table) {
             $table->id();
             $table->foreignId('agendamento_id')->constrained('agendamento');
             $table->foreignId('servicos_id')->constrained('servicos');
@@ -28,6 +28,6 @@ class CreateTableServicoDoAgendamento extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_servico_do_agendamento');
+        Schema::dropIfExists('servico_do_agendamento');
     }
 }
