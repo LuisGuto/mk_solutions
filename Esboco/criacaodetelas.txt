@@ -1,0 +1,3 @@
+Gabriel= técnico / atendente
+Luis= cliente / servico
+Guilherme= situacao do agendamento 
