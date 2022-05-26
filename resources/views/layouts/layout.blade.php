@@ -187,6 +187,20 @@
 
         </ul>
       </nav>
+
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+            <li class="nav-item">
+                <a href="/atendentes" class="nav-link">
+                    <i class="fab fa-product-hunt"></i>               <p>
+                   Atendentes
+                  </p>
+                </a>
+              </li>
+
+        </ul>
+      </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
