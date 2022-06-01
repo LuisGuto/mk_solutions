@@ -178,6 +178,21 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
             <li class="nav-item">
+                <a href="/tecnico" class="nav-link">
+                    <i class="fas fa-users"></i>                <p>
+                   Tecnico
+                  </p>
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+            <li class="nav-item">
                 <a href="/produtos" class="nav-link">
                     <i class="fab fa-product-hunt"></i>               <p>
                    Produtos

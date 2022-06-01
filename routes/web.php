@@ -5,6 +5,7 @@ use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\TecnicoController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -40,6 +41,12 @@ Route::get('/clientes-add', [AtendentesController::class, 'add']);
 Route::get('/clientes-edit/{id}', [AtendentesController::class, 'edit']);
 Route::post('/clientes-save/{id?}', [AtendentesController::class, 'save']);
 Route::get('/clientes-delete/{id}', [AtendentesController::class, 'delete']);
+
+Route::get('/tecnico', [TecnicoController::class, 'lista']);
+Route::get('/tecnico-add', [TecnicoController::class, 'add']);
+Route::get('/tecnico-edit/{id}', [TecnicoController::class, 'edit']);
+Route::post('/tecnico-save/{id?}', [TecnicoController::class, 'save']);
+Route::get('/tecnico-delete/{id}', [TecnicoController::class, 'delete']);
 
 
 
