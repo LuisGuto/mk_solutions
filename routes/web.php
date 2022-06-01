@@ -27,7 +27,6 @@ Route::get('/usuarios', [UsuariosController::class, 'lista']);
 Route::get('/clientes', [ClientesController::class, 'lista']);
 Route::get('/produtos', [ProdutoController::class, 'lista']);
 Route::get('/usuarios-add', [UsuariosController::class, 'add']);
-Route::get('/clientes-add', [ClientesController::class, 'add']);
 Route::get('/produtos-add', [ProdutoController::class, 'add']);
 
 Route::get('/atendentes', [AtendentesController::class, 'lista']);
@@ -35,6 +34,14 @@ Route::get('/atendentes-add', [AtendentesController::class, 'add']);
 Route::get('/atendentes-edit/{id}', [AtendentesController::class, 'edit']);
 Route::post('/atendentes-save/{id?}', [AtendentesController::class, 'save']);
 Route::get('/atendentes-delete/{id}', [AtendentesController::class, 'delete']);
+
+Route::get('/clientes', [AtendentesController::class, 'lista']);
+Route::get('/clientes-add', [AtendentesController::class, 'add']);
+Route::get('/clientes-edit/{id}', [AtendentesController::class, 'edit']);
+Route::post('/clientes-save/{id?}', [AtendentesController::class, 'save']);
+Route::get('/clientes-delete/{id}', [AtendentesController::class, 'delete']);
+
+
 
 
 

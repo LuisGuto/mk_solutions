@@ -1,93 +1,45 @@
 @extends('layouts.layout')
+
 @section('content')
+
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Cadastro Clientes
+            <h3 class="card-title">Cadastro</h3>
         </div>
         <!-- /.card-header -->
-
         <div class="card-body">
-            <form>
+            @if (isset($erro))
+                <div class="alert alert-danger" role="alert">
+                    Ocorreram problemas ao tentar salvar o registro!
+                </div>
+            @endif
+
+            <form action="/cliente-save/{{$cliente->id}}" method="post">
+                @csrf
                 <div class="mb-3">
-                    <label> Codigo </label>
-                    <input type="text" class="form-control" id="id" disabled="true">
+                    <label>ID</label>
+                    <input type="text" class="form-control" id="id" name="id" disabled="true" value="{{$categoria->id}}">
                 </div>
-
                 <div class="mb-3">
-                    <label for="name" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="name" aria-describedby="nomeHelp">
+                    <label>Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" value="{{$cliente->nome}}">
                 </div>
-            
                 <div class="mb-3">
-                    <label> CPF/CNPJ </label>
-                    <input type="number" class="form-control" id="cpf">
+                    <label>Cpf</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" value="{{$cliente->cpf}}">
                 </div>
-                
-
                 <div class="mb-3">
-                    <label> CEP </label>
-                    <input type="number" class="form-control" id="cep">
+                    <label>Endereco</label>
+                    <input type="text" class="form-control" id="endereco" name="endereco" value="{{$cliente->endereco}}">
                 </div>
-                
                 <div class="mb-3">
-                    <label for="name" class="form-label">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" aria-describedby="nomeHelp">
+                    <label>Contato</label>
+                    <input type="text" class="form-control" id="contato" name="contato" value="{{$cliente->contato}}">
                 </div>
-
-                <div class="mb-3">
-                    <label for="name" class="form-label">Bairro</label>
-                    <input type="text" class="form-control" id="Bairro">
-                </div>
-
-                <div class="mb-3">
-                    <label for="name" class="form-label">Rua</label>
-                    <input type="text" class="form-control" id="Rua">
-                </div>
-
-                <div class="mb-3">
-                    <label for="name" class="form-label">Numero</label>
-                    <input type="number" class="form-control" id="Numero">
-                </div>
-
-                <div class="mb-3">
-                    <label for="name" class="form-label">Complemento</label>
-                    <input type="text" class="form-control" id="Complemento">
-                </div>
-
-                <div class="form-group">
-                  <label>Telefone residencial</label>
-
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                    </div>
-                    <input type="text" class="form-control" data-inputmask='"mask": "(99) 999999999"' data-mask>
-                  </div>
-                  <!-- /.input group -->
-                </div>
-
-                <div class="form-group">
-                  <label>Telefone Celular</label>
-
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                    </div>
-                    <input type="text" class="form-control" data-inputmask='"mask": "(99) 999999999"' data-mask>
-                  </div>
-                  <!-- /.input group -->
-                </div>
-
-                <div class="mb-3">
-                    <label>E-mail</label>
-                    <input type="text" class="form-control" id="email">
-                </div>
-
                 <button type="submit" class="btn btn-primary">Salvar</button>
-                <a href="/clientes">
-                    <button type="button" class="btn btn-default">Voltar</button>
+                <a href="/cliente">
+                  <button type="button" class="btn btn-default">Voltar</button>
                 </a>
-
             </form>
         </div>
     </div>

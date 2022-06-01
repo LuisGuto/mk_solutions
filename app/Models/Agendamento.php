@@ -20,4 +20,9 @@ class Agendamento extends Model
         'data_hora_realizada',
         'staus_id',
     ];
+
+    public function agendamento()
+    {
+        return $this->belongsTo(MuitosPraUmModel::class, 'Agendamento');
+    }
 }
