@@ -18,7 +18,7 @@
                 @csrf
                 <div class="mb-3">
                     <label>ID</label>
-                    <input type="text" class="form-control" id="id" name="id" disabled="true" value="{{$categoria->id}}">
+                    <input type="text" class="form-control" id="id" name="id" disabled="true" value="{{$cliente->id}}">
                 </div>
                 <div class="mb-3">
                     <label>Nome</label>
