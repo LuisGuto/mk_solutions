@@ -36,11 +36,11 @@ Route::get('/atendentes-edit/{id}', [AtendentesController::class, 'edit']);
 Route::post('/atendentes-save/{id?}', [AtendentesController::class, 'save']);
 Route::get('/atendentes-delete/{id}', [AtendentesController::class, 'delete']);
 
-Route::get('/clientes', [AtendentesController::class, 'lista']);
-Route::get('/clientes-add', [AtendentesController::class, 'add']);
-Route::get('/clientes-edit/{id}', [AtendentesController::class, 'edit']);
-Route::post('/clientes-save/{id?}', [AtendentesController::class, 'save']);
-Route::get('/clientes-delete/{id}', [AtendentesController::class, 'delete']);
+Route::get('/clientes', [ClientesController::class, 'lista']);
+Route::get('/clientes-add', [ClientesController::class, 'add']);
+Route::get('/clientes-edit/{id}', [ClientesController::class, 'edit']);
+Route::post('/clientes-save/{id?}', [ClientesController::class, 'save']);
+Route::get('/clientes-delete/{id}', [ClientesController::class, 'delete']);
 
 Route::get('/tecnico', [TecnicoController::class, 'lista']);
 Route::get('/tecnico-add', [TecnicoController::class, 'add']);
