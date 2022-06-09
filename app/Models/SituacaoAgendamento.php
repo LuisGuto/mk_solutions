@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Situacao_agendamento extends Model
+class SituacaoAgendamento extends Model
 {
     use HasFactory;
 
-    protected $table = 'Situacao_agendamento';
-    protected $primarykey = "id_situacao_agendamento";
+    protected $table = 'situacao_agendamento';
+    protected $primarykey = "id-situacaoAgendamento";
 
     protected $fillable = [
-        'id_situacao_agendamento',
+        'id-situacaoAgendamento',
         'nova',
         'agendado',
         'em_andamento',

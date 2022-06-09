@@ -5,6 +5,7 @@ use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\SituacaoAgendamentoController;
 use App\Http\Controllers\TecnicoController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +30,9 @@ Route::get('/clientes', [ClientesController::class, 'lista']);
 Route::get('/produtos', [ProdutoController::class, 'lista']);
 Route::get('/usuarios-add', [UsuariosController::class, 'add']);
 Route::get('/produtos-add', [ProdutoController::class, 'add']);
+Route::get('/situacaoAgendamento-add', [SituacaoAgendamentoController::class, 'add']);
+
+
 
 Route::get('/atendentes', [AtendentesController::class, 'lista']);
 Route::get('/atendentes-add', [AtendentesController::class, 'add']);
@@ -47,6 +51,13 @@ Route::get('/tecnico-add', [TecnicoController::class, 'add']);
 Route::get('/tecnico-edit/{id}', [TecnicoController::class, 'edit']);
 Route::post('/tecnico-save/{id?}', [TecnicoController::class, 'save']);
 Route::get('/tecnico-delete/{id}', [TecnicoController::class, 'delete']);
+
+Route::get('/situacaoAgendamento', [SituacaoAgendamentoController::class, 'lista']);
+Route::get('/situacaoAgendamento-add', [SituacaoAgendamentoController::class, 'add']);
+Route::get('/situacaoAgendamento-edit/{id}', [SituacaoAgendamentoController::class, 'edit']);
+Route::post('/situacaoAgendamento-save/{id?}', [SituacaoAgendamentoController::class, 'save']);
+Route::get('/situacaoAgendamento-delete/{id}', [SituacaoAgendamentoController::class, 'delete']);
+
 
 
 
