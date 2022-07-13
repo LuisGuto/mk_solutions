@@ -14,7 +14,7 @@
                 </div>
             @endif
 
-            <form action="/cliente-save/{{$cliente->id}}" method="post">
+            <form action="/clientes-save/{{$clientes->id}}" method="post">
                 @csrf
                 <div class="mb-3">
                     <label>ID</label>
