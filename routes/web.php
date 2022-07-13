@@ -5,6 +5,7 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\ServicosController;
 use App\Http\Controllers\SituacaoAgendamentoController;
 use App\Http\Controllers\TecnicoController;
 use Illuminate\Support\Facades\Route;
