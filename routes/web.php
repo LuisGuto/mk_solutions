@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AtendentesController;
-use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProdutoController;
@@ -26,7 +26,7 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 Route::get('/usuarios', [UsuariosController::class, 'lista']);
-Route::get('/clientes', [ClientesController::class, 'lista']);
+Route::get('/cliente', [ClienteController::class, 'lista']);
 Route::get('/produtos', [ProdutoController::class, 'lista']);
 Route::get('/usuarios-add', [UsuariosController::class, 'add']);
 Route::get('/produtos-add', [ProdutoController::class, 'add']);
@@ -40,11 +40,11 @@ Route::get('/atendentes-edit/{id}', [AtendentesController::class, 'edit']);
 Route::post('/atendentes-save/{id?}', [AtendentesController::class, 'save']);
 Route::get('/atendentes-delete/{id}', [AtendentesController::class, 'delete']);
 
-Route::get('/clientes', [ClientesController::class, 'lista']);
-Route::get('/clientes-add', [ClientesController::class, 'add']);
-Route::get('/clientes-edit/{id}', [ClientesController::class, 'edit']);
-Route::post('/clientes-save/{id?}', [ClientesController::class, 'save']);
-Route::get('/clientes-delete/{id}', [ClientesController::class, 'delete']);
+Route::get('/cliente', [ClienteController::class, 'lista']);
+Route::get('/cliente-add', [ClienteController::class, 'add']);
+Route::get('/cliente-edit/{id}', [ClienteController::class, 'edit']);
+Route::post('/cliente-save/{id?}', [ClienteController::class, 'save']);
+Route::get('/cliente-delete/{id}', [ClienteController::class, 'delete']);
 
 Route::get('/tecnico', [TecnicoController::class, 'lista']);
 Route::get('/tecnico-add', [TecnicoController::class, 'add']);

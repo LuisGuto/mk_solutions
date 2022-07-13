@@ -164,9 +164,9 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
             <li class="nav-item">
-                <a href="/clientes" class="nav-link">
+                <a href="/cliente" class="nav-link">
                     <i class="fas fa-users"></i>                <p>
-                   Clientes
+                   Cliente
                   </p>
                 </a>
               </li>
