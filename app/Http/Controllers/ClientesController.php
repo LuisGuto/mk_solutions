@@ -8,6 +8,7 @@ use App\Models\Cliente;
 class ClientesController extends Controller
 {
     public function lista() {
+
         $lista = Cliente::all();
         return view('clientes', ['lista' => $lista]);
     }
