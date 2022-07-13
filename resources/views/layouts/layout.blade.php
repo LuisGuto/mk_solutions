@@ -221,6 +221,21 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
             <li class="nav-item">
+                <a href="/servicos" class="nav-link">
+                    <i class="fab fa-product-hunt"></i>               <p>
+                   Serviços
+                  </p>
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+            <li class="nav-item">
                 <a href="/situacaoAgendamento" class="nav-link">
                     <i class="fab fa-product-hunt"></i>               <p>
                         Situacao Agendamento

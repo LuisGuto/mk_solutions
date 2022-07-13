@@ -40,6 +40,12 @@ Route::get('/atendentes-edit/{id}', [AtendentesController::class, 'edit']);
 Route::post('/atendentes-save/{id?}', [AtendentesController::class, 'save']);
 Route::get('/atendentes-delete/{id}', [AtendentesController::class, 'delete']);
 
+Route::get('/servicos', [ServicosController::class, 'lista']);
+Route::get('/servicos-add', [ServicosController::class, 'add']);
+Route::get('/servicos-edit/{id}', [ServicosController::class, 'edit']);
+Route::post('/servicos-save/{id?}', [ServicosController::class, 'save']);
+Route::get('/servicos-delete/{id}', [ServicosController::class, 'delete']);
+
 Route::get('/cliente', [ClienteController::class, 'lista']);
 Route::get('/cliente-add', [ClienteController::class, 'add']);
 Route::get('/cliente-edit/{id}', [ClienteController::class, 'edit']);
