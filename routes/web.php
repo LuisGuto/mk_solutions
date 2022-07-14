@@ -3,8 +3,6 @@
 use App\Http\Controllers\AtendentesController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\UsuariosController;
-use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\ServicosController;
 use App\Http\Controllers\SituacaoAgendamentoController;
 use App\Http\Controllers\TecnicoController;
@@ -26,11 +24,7 @@ Route::group(['middleware' => ['auth']], function () {
 Route::get('/', function () {
     return view('home');
 })->name('home');
-Route::get('/usuarios', [UsuariosController::class, 'lista']);
 Route::get('/cliente', [ClienteController::class, 'lista']);
-Route::get('/produtos', [ProdutoController::class, 'lista']);
-Route::get('/usuarios-add', [UsuariosController::class, 'add']);
-Route::get('/produtos-add', [ProdutoController::class, 'add']);
 Route::get('/situacaoAgendamento-add', [SituacaoAgendamentoController::class, 'add']);
 
 

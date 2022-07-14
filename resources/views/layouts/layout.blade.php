@@ -146,19 +146,6 @@
     <div class="sidebar">
 
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
-            <li class="nav-item">
-                <a href="/usuarios" class="nav-link">
-                    <i class="fas fa-user-ninja"></i>                 <p>
-                   Usuarios
-                  </p>
-                </a>
-              </li>
-
-        </ul>
-      </nav>
 
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -188,20 +175,6 @@
         </ul>
       </nav>
 
-
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
-            <li class="nav-item">
-                <a href="/produtos" class="nav-link">
-                    <i class="fab fa-product-hunt"></i>               <p>
-                   Produtos
-                  </p>
-                </a>
-              </li>
-
-        </ul>
-      </nav>
 
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
