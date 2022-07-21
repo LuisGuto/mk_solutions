@@ -27,7 +27,7 @@ class TecnicoController extends Controller
             $salvou = Tecnico::create($request->all());
         } else {
             // Caso contrário, deverá atualizar o registro do id obtido
-            $salvou = Tecnico::where('id', $id)->update($request->except('_token', '_method'));
+            $salvou = Tecnico::find($id)->update($request->except('_token', '_method'));
         }
         if ($salvou) {
             return $this->lista();
@@ -36,7 +36,7 @@ class TecnicoController extends Controller
     }
 
     public function delete($id) {
-        $excluiu = Tecnico::where('id', $id)->delete();
+        $excluiu = Tecnico::find($id)->delete();
         if ($excluiu) {
             return $this->lista();
         }
