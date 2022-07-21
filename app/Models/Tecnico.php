@@ -4,12 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-class Tecnico extends Model
+use OwenIt\Auditing\Contracts\Auditable;
+class Tecnico extends Model implements Auditable
 {
     use HasFactory;
-
-    protected $table = 'Tecnico';
+    use \OwenIt\Auditing\Auditable;
+    protected $table = 'tecnico';
 
     protected $fillable = [
         'nome',
