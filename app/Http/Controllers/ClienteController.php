@@ -29,7 +29,7 @@ class ClienteController extends Controller
             $salvou = Cliente::create($request->all());
         } else {
             // Caso contrário, deverá atualizar o registro do id obtido
-            $salvou = Cliente::where('id', $id)->update($request->except('_token', '_method'));
+            $salvou = Cliente::find($id)->update($request->except('_token', '_method'));
         }
         if ($salvou) {
             return $this->lista();
@@ -38,7 +38,7 @@ class ClienteController extends Controller
     }
 
     public function delete($id) {
-        $excluiu = Cliente::where('id', $id)->delete();
+        $excluiu = Cliente::find($id)->delete();
         if ($excluiu) {
             return $this->lista();
         }
