@@ -26,7 +26,7 @@
                 </div>
                 <div class="mb-3">
                     <label>Cpf</label>
-                    <input type="text" class="form-control" id="cpf" name="cpf" required="true" value="{{$cliente->cpf}}">
+                    <input type="text" class="form-control" id="cpf" name="cpf"  value="{{$cliente->cpf}}">
                 </div>
                 <div class="mb-3">
                     <label>Endereco</label>
