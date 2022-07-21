@@ -29,7 +29,7 @@ class AtendentesController extends Controller
             $salvou = Atendentes::create($request->all());
         } else {
             // Caso contrário, deverá atualizar o registro do id obtido
-            $salvou = Atendentes::where('id', $id)->update($request->except('_token', '_method'));
+            $salvou = Atendentes::find($id)->update($request->except('_token', '_method'));
         }
         if ($salvou) {
             return $this->lista();
@@ -38,7 +38,7 @@ class AtendentesController extends Controller
     }
 
     public function delete($id) {
-        $excluiu = Atendentes::where('id', $id)->delete();
+        $excluiu = Atendentes::find($id)->delete();
         if ($excluiu) {
             return $this->lista();
         }
