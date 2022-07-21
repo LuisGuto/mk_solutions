@@ -29,7 +29,7 @@ class SituacaoAgendamentoController extends Controller
             $salvou = SituacaoAgendamento::create($request->all());
         } else {
             // Caso contrário, deverá atualizar o registro do id obtido
-            $salvou = SituacaoAgendamento::where('id', $id)->update($request->except('_token', '_method'));
+            $salvou = SituacaoAgendamento::find($id)->update($request->except('_token', '_method'));
         }
         if ($salvou) {
             return $this->lista();
@@ -38,7 +38,7 @@ class SituacaoAgendamentoController extends Controller
     }
 
     public function delete($id) {
-        $excluiu = SituacaoAgendamento::where('id', $id)->delete();
+        $excluiu = SituacaoAgendamento::find($id)->delete();
         if ($excluiu) {
             return $this->lista();
         }
