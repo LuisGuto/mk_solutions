@@ -4,12 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-class Servicos extends Model
+use OwenIt\Auditing\Contracts\Auditable;
+class Servicos extends Model implements Auditable
 {
     use HasFactory;
+    use \OwenIt\Auditing\Auditable;
 
-    protected $table = 'Servicos';
+    protected $table = 'servicos';
     protected $primarykey = "id_servicos";
 
     protected $fillable = [
