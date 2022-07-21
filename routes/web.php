@@ -6,6 +6,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ServicosController;
 use App\Http\Controllers\SituacaoAgendamentoController;
 use App\Http\Controllers\TecnicoController;
+use App\Http\Controllers\AgendamentoController;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -59,6 +61,11 @@ Route::get('/situacaoAgendamento-edit/{id}', [SituacaoAgendamentoController::cla
 Route::post('/situacaoAgendamento-save/{id?}', [SituacaoAgendamentoController::class, 'save']);
 Route::get('/situacaoAgendamento-delete/{id}', [SituacaoAgendamentoController::class, 'delete']);
 
+Route::get('/agendamento', [AgendamentoController::class, 'lista']);
+Route::get('/agendamento-add', [AgendamentoController::class, 'add']);
+Route::get('/agendamento-edit/{id}', [AgendamentoController::class, 'edit']);
+Route::post('/agendamento-save/{id?}', [AgendamentoController::class, 'save']);
+Route::get('/agendamento-delete/{id}', [AgendamentoController::class, 'delete']);
 
 
 
