@@ -28,7 +28,7 @@ class ServicosController extends Controller
             $salvou = Servicos::create($request->all());
         } else {
             // Caso contrário, deverá atualizar o registro do id obtido
-            $salvou = Servicos::where('id', $id)->update($request->except('_token', '_method'));
+            $salvou = Servicos::find($id)->update($request->except('_token', '_method'));
         }
         if ($salvou) {
             return $this->lista();
@@ -37,7 +37,7 @@ class ServicosController extends Controller
     }
 
     public function delete($id) {
-        $excluiu = Servicos::where('id', $id)->delete();
+        $excluiu = Servicos::find($id)->delete();
         if ($excluiu) {
             return $this->lista();
         }
